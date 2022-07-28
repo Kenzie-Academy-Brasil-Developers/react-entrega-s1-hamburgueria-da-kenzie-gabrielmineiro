@@ -2,6 +2,7 @@ import "./App.css";
 import ProductsList from "./components/ProductsList";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
+import Header from "./components/Header";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Header />
       <ProductsList list={products} />
     </div>
   );
