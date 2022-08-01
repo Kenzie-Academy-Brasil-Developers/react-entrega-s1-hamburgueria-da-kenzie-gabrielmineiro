@@ -1,4 +1,9 @@
 /*header*/
+.containerProdutosCarrinho {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,4 +97,115 @@
   color: #27ae60;
   font-weight: bold;
   transition: 1s;
+}
+.carrinho {
+  margin: 2rem 5rem 0 0;
+  background-color: #f5f5f5;
+  height: 20rem;
+  width: 25rem;
+  border-radius: 0.4rem;
+}
+.tituloCarrinho {
+  height: 20%;
+  background-color: #27ae60;
+  border-radius: 0.4rem 0.4rem 0 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  font-size: large;
+  color: #f5f5f5;
+  font-weight: 600;
+}
+.carrinhoVazio {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 650;
+  font-size: large;
+}
+.carrinho li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.6rem 0.4rem 0 -1.8rem;
+  height: 5.5rem;
+}
+.containerImg {
+  background-color: #e0e0e0;
+  width: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+.carrinho img {
+  width: 4rem;
+}
+.descricaoCarrinho {
+  margin-top: -1rem;
+  width: 50%;
+  height: 100%;
+}
+.carrinhoNome {
+  font-weight: 700;
+  font-size: medium;
+  max-width: 100%;
+}
+.carrinhoCategoria {
+  opacity: 0.8;
+  font-size: small;
+}
+.carrinho button {
+  border: none;
+  height: 1rem;
+  background-color: transparent;
+  color: #bdbdbd;
+  font-weight: 700;
+}
+.carrinho button:hover {
+  color: #b1acac;
+  cursor: pointer;
+}
+.divScroll {
+  height: 80%;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar-track {
+  background-color: green;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: green;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(141, 233, 4, 0.633);
+}
+.valor {
+  border-top: 2px solid #b1acac;
+  background-color: #f5f5f5;
+  padding: 0 1rem 0 1rem;
+}
+.totalPreco {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  font-weight: bold;
+}
+.preco {
+  color: #828282;
+}
+.valor button {
+  background-color: #828282;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+.valor button:hover {
+  background-color: #27ae60;
+  color: white;
+  cursor: pointer;
 }

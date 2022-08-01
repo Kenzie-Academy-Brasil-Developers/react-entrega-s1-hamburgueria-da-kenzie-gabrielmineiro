@@ -1,4 +1,3 @@
-import "./App.css";
 import ProductsList from "./components/ProductsList";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
@@ -14,7 +13,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Header />
+      <Header produtos={products} setProdutos={setProducts} />
       <ProductsList list={products} />
     </div>
   );

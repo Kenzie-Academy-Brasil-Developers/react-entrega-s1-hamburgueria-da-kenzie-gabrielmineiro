@@ -1,5 +1,16 @@
+import { useState } from "react";
 import styles from "../styles.module.css";
-function Header() {
+function Header({ produtos, setProdutos }) {
+  const [value, setValue] = useState("");
+  function filtro() {
+    setProdutos(
+      produtos.filter(
+        (elem) =>
+          elem.name.toLowerCase() === value.toLowerCase() ||
+          elem.category.toLowerCase() === value.toLowerCase()
+      )
+    );
+  }
   return (
     <header className={styles.header}>
       <img
@@ -12,8 +23,12 @@ function Header() {
           type="text"
           className={styles.inputHeader}
           placeholder="Digite aqui"
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
         />
-        <button className={styles.buttonHeader}>Pesquisar</button>
+        <button className={styles.buttonHeader} onClick={filtro}>
+          Pesquisar
+        </button>
       </section>
     </header>
   );
