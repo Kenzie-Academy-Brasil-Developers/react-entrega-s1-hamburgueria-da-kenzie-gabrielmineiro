@@ -38,6 +38,14 @@
   background-color: #27ae60;
   color: white;
 }
+.resultados {
+  margin: 5% 0 0 10%;
+  font-weight: bold;
+  font-size: 25px;
+}
+.texto {
+  color: #828282;
+}
 /*Lista de produtos*/
 .ulList {
   display: flex;
