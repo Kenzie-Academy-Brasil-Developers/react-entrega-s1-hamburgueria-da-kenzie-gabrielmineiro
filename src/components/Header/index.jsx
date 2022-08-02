@@ -7,8 +7,8 @@ function Header({ produtos, setProdutos }) {
   function filtro() {
     const produtosFiltrados = produtos.filter(
       (elem) =>
-        elem.name.toLowerCase() === value.toLowerCase() ||
-        elem.category.toLowerCase() === value.toLowerCase()
+        elem.name.toLowerCase().includes(value.toLowerCase()) ||
+        elem.category.toLowerCase().includes(value.toLowerCase())
     );
     setProdutos(produtosFiltrados);
 

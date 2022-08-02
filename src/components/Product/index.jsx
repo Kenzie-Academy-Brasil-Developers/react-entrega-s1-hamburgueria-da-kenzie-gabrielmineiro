@@ -25,7 +25,7 @@ function Product({ list, produto, setProduto }) {
         <section className={styles.sectionDescription}>
           <h3>{list.name}</h3>
           <span>{list.category}</span>
-          <p>R${list.price}</p>
+          <p>R${list.price.toFixed(2)}</p>
           <button onClick={handleSubmit}>Adicionar</button>
         </section>
       </li>

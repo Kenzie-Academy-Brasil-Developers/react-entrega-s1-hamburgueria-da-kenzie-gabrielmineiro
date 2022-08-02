@@ -47,7 +47,7 @@ function Cart({ produtosCarrinho, setProduto }) {
           <section className={styles.valor}>
             <section className={styles.totalPreco}>
               <p className={styles.total}>Total</p>
-              <p className={styles.preco}>R${valorTotal}</p>
+              <p className={styles.preco}>R${valorTotal.toFixed(2)}</p>
             </section>
             <button onClick={removerTodos}>Remover Todos</button>
           </section>
