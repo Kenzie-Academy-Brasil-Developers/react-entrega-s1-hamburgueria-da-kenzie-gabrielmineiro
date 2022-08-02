@@ -1,4 +1,5 @@
 import styles from "../styles.module.css";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 function Cart({ produtosCarrinho, setProduto }) {
   function remover(id) {
@@ -15,7 +16,10 @@ function Cart({ produtosCarrinho, setProduto }) {
   let valorTotal = arr.reduce((old, current) => old + current, 0);
   return (
     <div className={styles.carrinho}>
-      <section className={styles.tituloCarrinho}>Carrinho de compras</section>
+      <section className={styles.tituloCarrinho}>
+        <AiOutlineShoppingCart className={styles.iconCarrinho} />
+        Carrinho de compras
+      </section>
       {produtosCarrinho.length === 0 ? (
         <section className={styles.carrinhoVazio}>
           Seu carrinho de compras está vazio

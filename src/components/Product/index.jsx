@@ -1,5 +1,20 @@
 import styles from "../styles.module.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Product({ list, produto, setProduto }) {
+  function verifica(lista, produtoAtual) {
+    return lista.includes(produtoAtual);
+  }
+  function adiciona() {
+    setProduto([...produto, list]);
+  }
+  function handleSubmit(event) {
+    verifica(produto, list)
+      ? toast.error("O produto já foi adicionado ao carrinho")
+      : adiciona();
+  }
+
   return (
     <>
       <li className={styles.liList}>
@@ -11,9 +26,7 @@ function Product({ list, produto, setProduto }) {
           <h3>{list.name}</h3>
           <span>{list.category}</span>
           <p>R${list.price}</p>
-          <button onClick={() => setProduto([...produto, list])}>
-            Adicionar
-          </button>
+          <button onClick={handleSubmit}>Adicionar</button>
         </section>
       </li>
     </>

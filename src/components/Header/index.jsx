@@ -1,15 +1,18 @@
 import { useState } from "react";
 import styles from "../styles.module.css";
+import { BsSearch } from "react-icons/bs";
+
 function Header({ produtos, setProdutos }) {
   const [value, setValue] = useState("");
   function filtro() {
-    setProdutos(
-      produtos.filter(
-        (elem) =>
-          elem.name.toLowerCase() === value.toLowerCase() ||
-          elem.category.toLowerCase() === value.toLowerCase()
-      )
+    const produtosFiltrados = produtos.filter(
+      (elem) =>
+        elem.name.toLowerCase() === value.toLowerCase() ||
+        elem.category.toLowerCase() === value.toLowerCase()
     );
+    setProdutos(produtosFiltrados);
+
+    value === "" && setProdutos(produtos);
   }
   return (
     <header className={styles.header}>
@@ -27,7 +30,7 @@ function Header({ produtos, setProdutos }) {
           onChange={(event) => setValue(event.target.value)}
         />
         <button className={styles.buttonHeader} onClick={filtro}>
-          Pesquisar
+          <BsSearch className={styles.iconHeader} />
         </button>
       </section>
     </header>

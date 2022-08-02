@@ -27,9 +27,13 @@
 .inputHeader {
   border: none;
 }
+.iconHeader {
+  zoom: 120%;
+}
 .buttonHeader {
   border: none;
   height: 2rem;
+  width: 2rem;
   border-radius: 0.5rem;
   background-color: #27ae60;
   color: white;
@@ -47,25 +51,33 @@
   border-radius: 1%;
   list-style: none;
   margin: 1rem;
-  height: 20rem;
+  height: 25rem;
   width: 15rem;
+}
+.liList:hover {
+  border: 3px solid #27ae60;
+  transition: 0.5s;
 }
 .imgList {
   height: 100%;
   width: 60%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .imgList:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .sectionImgList {
   background-color: #e0e0e0;
   border-radius: 1% 1% 0 0;
-  height: 40%;
+  height: 45%;
   width: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
+}
+.sectionImgList:hover {
+  height: 47%;
+  transition: 0.5s;
 }
 .sectionDescription {
   display: flex;
@@ -74,7 +86,6 @@
   padding-left: 1rem;
 }
 .sectionDescription span {
-  margin-top: -0.5rem;
   color: gray;
   font-size: small;
 }
@@ -83,7 +94,7 @@
 }
 .sectionDescription button {
   border: none;
-  width: 35%;
+  width: 50%;
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 0.5em;
@@ -93,10 +104,10 @@
 .sectionDescription button:hover {
   cursor: pointer;
   background-color: white;
-  border: 2px solid #27ae60;
-  color: #27ae60;
+  border: 2px solid rgb(215, 18, 18);
+  color: rgb(215, 18, 18);
   font-weight: bold;
-  transition: 1s;
+  transition: 0.5s;
 }
 .carrinho {
   margin: 2rem 5rem 0 0;
@@ -168,6 +179,10 @@
   color: #b1acac;
   cursor: pointer;
 }
+.iconCarrinho {
+  zoom: 150%;
+  margin-right: 0.2rem;
+}
 .divScroll {
   height: 80%;
   overflow-y: scroll;
@@ -208,4 +223,49 @@
   background-color: #27ae60;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 1070px) {
+  .ulList {
+    overflow-x: scroll;
+    flex-direction: column;
+
+    width: 40%;
+    height: 28rem;
+  }
+  .carrinho {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .containerProdutosCarrinho {
+    flex-direction: column;
+  }
+  .ulList {
+    overflow-x: scroll;
+    flex-direction: column;
+    margin: 1rem;
+    width: 90%;
+    height: 28rem;
+  }
+  .carrinho {
+    align-self: center;
+    width: 80%;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    width: 103%;
+  }
+  .sectionHeader {
+    margin-right: 0;
+  }
+  .ulList {
+    height: 25rem;
+    width: 85%;
+  }
+  .carrinho {
+    width: 90%;
+    margin: auto;
+    align-self: center;
+  }
 }
